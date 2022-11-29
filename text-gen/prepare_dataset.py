@@ -15,7 +15,7 @@ class Lookup:
 
 
 def text_from_ids(ids, chars_from_ids):
-    return tf.strings.reduce_join(chars_from_ids(ids), axis=-1)
+    return tf.strings.reduce_join(chars_from_ids(ids), axis=-1, separator=' ')
 
 def split_sequence_into_input_and_output(sequence):
     input = sequence[:-1]
@@ -48,7 +48,8 @@ def dataset_from_text(text, batch_size=64, sequence_length=128):
 
 def dataset_with_lookup(text, lookup, batch_size=64, sequence_length=128):
     # Convert text to ids using the lookup
-    ids = lookup.ids_from_chars(tf.strings.unicode_split(text, 'UTF-8'))
+    #ids = lookup.ids_from_chars(tf.strings.unicode_split(text, 'UTF-8'))
+    ids = lookup.ids_from_chars(tf.constant(text))
 
     # Create a dataset of character ids
     ids_dataset = tf.data.Dataset.from_tensor_slices(ids)
