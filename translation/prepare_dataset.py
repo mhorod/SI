@@ -47,6 +47,7 @@ def standardize_text(text):
     text = tf.strings.join(["<bos>", text, "<eos>"], separator=" ")
     return text
 
+
 def make_text_preprocessors(max_vocab_size, ds):
     context_text_preprocessor = tf.keras.layers.TextVectorization(
         max_tokens=max_vocab_size,

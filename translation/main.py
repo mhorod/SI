@@ -1,10 +1,9 @@
 import tensorflow as tf
 
+import random
+
 from prepare_dataset import *
-
-import numpy as np
-import matplotlib.pyplot as plt
-
+from bleu import *
 
 class Encoder(tf.keras.layers.Layer):
     def __init__(self, text_processor, rnn_units):
@@ -138,9 +137,14 @@ def masked_accuracy(y_true, y_pred):
     return tf.reduce_sum(matched) / tf.reduce_sum(mask)
 
 
-MAX_VOCAB_SIZE = 10000
+MAX_VOCAB_SIZE = 10**6
+
+train_coeff = 0.8
 
 translations = load_translations_from_file("spa-small.txt")
+translations, test_translations = translations[int(len(translations) * train_coeff):], translations[:int(len(translations) * train_coeff)]
+
+
 train_ds, test_ds = datasets_from_translations(translations)
 
 context_text_preprocessor, target_text_preprocessor = make_text_preprocessors(
@@ -148,15 +152,37 @@ context_text_preprocessor, target_text_preprocessor = make_text_preprocessors(
 train_ds = process_dataset(
     train_ds, context_text_preprocessor, target_text_preprocessor)
 
+test_ds = process_dataset(
+    test_ds, context_text_preprocessor, target_text_preprocessor)
+
 RNN_UNITS = 1024
 model = Seq2Seq(context_text_preprocessor, target_text_preprocessor, RNN_UNITS)
 
 model.compile(optimizer='adam', loss=masked_loss,
               metrics=[masked_accuracy, masked_loss])
-model.fit(train_ds, epochs=35)
+model.fit(train_ds, epochs=30)
 
-with open("spa-small.txt") as f:
-    sequences = [line.split('\t')[0] for line in f.readlines()]
-translated = model.translate(sequences)
-for sequence, translation in zip(sequences, translated):
-    print(sequence, '->', translation.decode('utf-8'))
+# evaluate on test set
+loss, acc, _ =  model.evaluate(test_ds)
+print(f"EVALUTATION - Loss: {loss}, Accuracy: {acc}")
+
+
+# Choose 10 random sentences from train translations
+train_sample = random.sample(translations, 10)
+test_sample = random.sample(test_translations, 10)
+
+# Translate them
+
+print("Train sample:")
+for text, target in train_sample:
+    translated = model.translate([text])[0].decode('utf-8')
+    bleu_score = bleu(target, translated)
+
+    print(f"{text} ({target}) -> {translated} (BLEU: {bleu_score:.2f})")
+
+
+print("Test sample:")
+for text, target in test_sample:
+    translated = model.translate([text])[0].decode('utf-8')
+    bleu_score = bleu(target, translated)
+    print(f"{text} ({target}) -> {translated} (BLEU: {bleu_score:.2f})")
