@@ -1,122 +1,13 @@
-import tensorflow as tf
-
 import random
+
+import tensorflow as tf
+from matplotlib import pyplot as plt
+
+import attention_model
+import vanilla_model
 
 from prepare_dataset import *
 from bleu import *
-
-class Encoder(tf.keras.layers.Layer):
-    def __init__(self, text_processor, rnn_units):
-        super().__init__()
-        self.text_processor = text_processor
-        self.vocab_size = text_processor.vocabulary_size()
-
-        self.rnn = tf.keras.layers.Bidirectional(
-            merge_mode='sum',
-            layer=tf.keras.layers.GRU(
-                rnn_units, return_sequences=True)
-        )
-
-        self.embedding = tf.keras.layers.Embedding(
-            self.vocab_size, rnn_units, mask_zero=True)
-
-    def call(self, x, training=False):
-        x = self.embedding(x)
-        return self.rnn(x, training=training)
-
-    def convert_input(self, texts):
-        texts = tf.convert_to_tensor(texts)
-        if len(texts.shape) == 0:
-            texts = tf.convert_to_tensor(texts)[tf.newaxis]
-        return self(self.text_processor(texts).to_tensor())
-
-
-class Decoder(tf.keras.layers.Layer):
-    def __init__(self, text_processor, rnn_units):
-        super().__init__()
-        self.text_processor = text_processor
-        self.vocab_size = text_processor.vocabulary_size()
-
-        self.word_to_id = tf.keras.layers.StringLookup(
-            vocabulary=self.text_processor.get_vocabulary(), mask_token='')
-
-        self.id_to_word = tf.keras.layers.StringLookup(
-            vocabulary=self.text_processor.get_vocabulary(), mask_token='', invert=True)
-
-        self.embedding = tf.keras.layers.Embedding(
-            self.vocab_size, rnn_units, mask_zero=True)
-
-        self.attention = tf.keras.layers.Attention()
-
-        self.rnn = tf.keras.layers.GRU(
-            rnn_units, return_sequences=True, return_state=True)
-
-        self.dense = tf.keras.layers.Dense(self.vocab_size)
-
-        self.start_token = self.word_to_id('<bos>')
-        self.end_token = self.word_to_id('<eos>')
-
-    def call(self, x, state=None, training=False, return_state=False):
-        x, ctx = x
-        x = self.embedding(x)
-
-        # Attention
-        x = self.attention(inputs=[x, ctx], mask=[None, ctx._keras_mask])
-
-        x, state = self.rnn(x, initial_state=state, training=training)
-        x = self.dense(x)
-        if return_state:
-            return x, state
-        else:
-            return x
-
-    def get_initial_state(self, context):
-        batch_size = tf.shape(context)[0]
-        tokens = tf.fill([batch_size, 1], self.start_token)
-        done = tf.zeros([batch_size, 1], dtype=tf.bool)
-        embedded = self.embedding(tokens)
-        state = self.rnn.get_initial_state(embedded)[0]
-        return tokens, state, done
-
-    def tokens_to_text(self, tokens):
-        words = self.id_to_word(tokens)
-        result = tf.strings.reduce_join(words, axis=-1, separator=' ')
-        return result.numpy()
-
-    def get_next_token(self, next_token, context, state, done):
-        logits, state = self((next_token, context), state, return_state=True)
-        next_token = tf.argmax(logits, axis=-1)
-        done = done | (next_token == self.end_token)
-        next_token = tf.where(done, tf.constant(0, dtype=tf.int64), next_token)
-        return next_token, state, done
-
-
-class Seq2Seq(tf.keras.Model):
-    def __init__(self, context_text_processor, target_text_processor, rnn_units):
-        super().__init__()
-        self.encoder = Encoder(context_text_processor, rnn_units)
-        self.decoder = Decoder(target_text_processor, rnn_units)
-
-    def call(self, inputs):
-        context, target = inputs
-        encoder_states = self.encoder(context)
-        decoded = self.decoder((target, encoder_states))
-        return decoded
-
-    def translate(self, texts):
-        context = self.encoder.convert_input(texts)
-        tokens = []
-        next_token, state, done = self.decoder.get_initial_state(context)
-
-        for _ in range(10):
-            next_token, state, done = self.decoder.get_next_token(
-                next_token, context, state, done)
-            tokens.append(next_token)
-
-        tokens = tf.concat(tokens, axis=1)
-        result = self.decoder.tokens_to_text(tokens)
-        return result
-
 
 def masked_loss(y_true, y_pred):
     # Because we pad tokens with 0, we have to calculate the loss only on the non-zero tokens
@@ -136,14 +27,48 @@ def masked_accuracy(y_true, y_pred):
     mask = tf.cast(y_true != 0, dtype=matched.dtype)
     return tf.reduce_sum(matched) / tf.reduce_sum(mask)
 
+def train_and_save_model(name, model, train_ds, epochs=20):
+    model.compile(optimizer='adam', loss=masked_loss,
+                metrics=[masked_accuracy, masked_loss])
+    history = model.fit(train_ds, epochs=epochs)
+    tf.saved_model.save(model, f"models/{name}")
+
+    fig, ax = plt.subplots(1, 1)
+    ax.plot(history.history['masked_accuracy'], label='Accuracy')
+    ax.set_ylim(0, 1)
+    ax.legend()
+    fig.savefig(f"{name}-history.png")
+
+
+def evaluate_model(model, ds):
+    _, acc, loss = model.evaluate(ds)
+    print(f"Accuracy: {acc}, Loss: {loss}")
+
+
+def get_bleu_scores(model, sequences):
+    scores = []
+    texts = [s[0] for s in sequences]
+    targets = [s[1] for s in sequences]
+    translations = model.translate(texts)
+    for text, target, prediction in zip(texts, targets, translations):
+        bleu_score = bleu(target, prediction)
+        print(f"{text} ({target}) -> {prediction} (BLEU: {bleu_score:.2f})")
+        scores.append(bleu_score)
+    avg = sum(scores) / len(scores)
+    print(f"Average BLEU score: {avg:.2f}")
+
+def bleu_scores_train_test(model, train_sample, test_sample):
+    print("Train set")
+    get_bleu_scores(model, train_sample)
+    print()
+    print("Test set")
+    get_bleu_scores(model, test_sample)
 
 MAX_VOCAB_SIZE = 10**6
-
 train_coeff = 0.8
 
-translations = load_translations_from_file("spa-small.txt")
+translations = load_translations_from_file("spa-big.txt")
 translations, test_translations = translations[int(len(translations) * train_coeff):], translations[:int(len(translations) * train_coeff)]
-
 
 train_ds, test_ds = datasets_from_translations(translations)
 
@@ -156,33 +81,17 @@ test_ds = process_dataset(
     test_ds, context_text_preprocessor, target_text_preprocessor)
 
 RNN_UNITS = 1024
-model = Seq2Seq(context_text_preprocessor, target_text_preprocessor, RNN_UNITS)
-
-model.compile(optimizer='adam', loss=masked_loss,
-              metrics=[masked_accuracy, masked_loss])
-model.fit(train_ds, epochs=30)
-
-# evaluate on test set
-loss, acc, _ =  model.evaluate(test_ds)
-print(f"EVALUTATION - Loss: {loss}, Accuracy: {acc}")
-
+vanilla = vanilla_model.Seq2Seq(context_text_preprocessor, target_text_preprocessor, RNN_UNITS)
+attention = attention_model.Seq2Seq(context_text_preprocessor, target_text_preprocessor, RNN_UNITS)
 
 # Choose 10 random sentences from train translations
-train_sample = random.sample(translations, 10)
-test_sample = random.sample(test_translations, 10)
+train_sample = random.sample(translations, 100)
+test_sample = random.sample(test_translations, 100)
 
-# Translate them
+train_and_save_model("vanilla", vanilla, train_ds, epochs=30)
+evaluate_model(vanilla, test_ds)
+bleu_scores_train_test(vanilla, train_sample, test_sample)
 
-print("Train sample:")
-for text, target in train_sample:
-    translated = model.translate([text])[0].decode('utf-8')
-    bleu_score = bleu(target, translated)
-
-    print(f"{text} ({target}) -> {translated} (BLEU: {bleu_score:.2f})")
-
-
-print("Test sample:")
-for text, target in test_sample:
-    translated = model.translate([text])[0].decode('utf-8')
-    bleu_score = bleu(target, translated)
-    print(f"{text} ({target}) -> {translated} (BLEU: {bleu_score:.2f})")
+train_and_save_model("attention", attention, train_ds, epochs=30)
+evaluate_model(attention, test_ds)
+bleu_scores_train_test(attention, train_sample, test_sample)

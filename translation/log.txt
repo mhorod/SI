@@ -1,0 +1,534 @@
+Epoch 1/30
+127/127 [==============================] - 21s 97ms/step - loss: 5.2052 - masked_accuracy: 0.2839 - masked_loss: 5.2007
+Epoch 2/30
+127/127 [==============================] - 12s 97ms/step - loss: 4.0408 - masked_accuracy: 0.3549 - masked_loss: 4.0363
+Epoch 3/30
+127/127 [==============================] - 12s 96ms/step - loss: 3.5388 - masked_accuracy: 0.3869 - masked_loss: 3.5431
+Epoch 4/30
+127/127 [==============================] - 12s 98ms/step - loss: 3.0997 - masked_accuracy: 0.4204 - masked_loss: 3.0978
+Epoch 5/30
+127/127 [==============================] - 12s 98ms/step - loss: 2.7227 - masked_accuracy: 0.4538 - masked_loss: 2.7223
+Epoch 6/30
+127/127 [==============================] - 12s 98ms/step - loss: 2.3933 - masked_accuracy: 0.5019 - masked_loss: 2.3940
+Epoch 7/30
+127/127 [==============================] - 13s 99ms/step - loss: 2.1334 - masked_accuracy: 0.5439 - masked_loss: 2.1358
+Epoch 8/30
+127/127 [==============================] - 12s 98ms/step - loss: 1.9335 - masked_accuracy: 0.5866 - masked_loss: 1.9345
+Epoch 9/30
+127/127 [==============================] - 12s 98ms/step - loss: 1.7876 - masked_accuracy: 0.6174 - masked_loss: 1.7898
+Epoch 10/30
+127/127 [==============================] - 12s 98ms/step - loss: 1.6800 - masked_accuracy: 0.6382 - masked_loss: 1.6803
+Epoch 11/30
+127/127 [==============================] - 12s 94ms/step - loss: 1.6338 - masked_accuracy: 0.6491 - masked_loss: 1.6339
+Epoch 12/30
+127/127 [==============================] - 12s 97ms/step - loss: 1.5864 - masked_accuracy: 0.6565 - masked_loss: 1.5899
+Epoch 13/30
+127/127 [==============================] - 12s 98ms/step - loss: 1.5769 - masked_accuracy: 0.6620 - masked_loss: 1.5764
+Epoch 14/30
+127/127 [==============================] - 12s 98ms/step - loss: 1.5497 - masked_accuracy: 0.6668 - masked_loss: 1.5486
+Epoch 15/30
+127/127 [==============================] - 12s 98ms/step - loss: 1.5630 - masked_accuracy: 0.6632 - masked_loss: 1.5622
+Epoch 16/30
+127/127 [==============================] - 12s 97ms/step - loss: 1.5652 - masked_accuracy: 0.6640 - masked_loss: 1.5619
+Epoch 17/30
+127/127 [==============================] - 12s 98ms/step - loss: 1.5290 - masked_accuracy: 0.6682 - masked_loss: 1.5294
+Epoch 18/30
+127/127 [==============================] - 12s 98ms/step - loss: 1.5532 - masked_accuracy: 0.6628 - masked_loss: 1.5509
+Epoch 19/30
+127/127 [==============================] - 12s 95ms/step - loss: 1.5321 - masked_accuracy: 0.6666 - masked_loss: 1.5335
+Epoch 20/30
+127/127 [==============================] - 12s 98ms/step - loss: 1.5244 - masked_accuracy: 0.6663 - masked_loss: 1.5238
+Epoch 21/30
+127/127 [==============================] - 12s 98ms/step - loss: 1.4971 - masked_accuracy: 0.6690 - masked_loss: 1.4971
+Epoch 22/30
+127/127 [==============================] - 12s 97ms/step - loss: 1.4755 - masked_accuracy: 0.6735 - masked_loss: 1.4756
+Epoch 23/30
+127/127 [==============================] - 12s 95ms/step - loss: 1.4752 - masked_accuracy: 0.6709 - masked_loss: 1.4746
+Epoch 24/30
+127/127 [==============================] - 12s 95ms/step - loss: 1.4487 - masked_accuracy: 0.6749 - masked_loss: 1.4480
+Epoch 25/30
+127/127 [==============================] - 12s 98ms/step - loss: 1.4522 - masked_accuracy: 0.6736 - masked_loss: 1.4476
+Epoch 26/30
+127/127 [==============================] - 12s 97ms/step - loss: 1.4441 - masked_accuracy: 0.6751 - masked_loss: 1.4417
+Epoch 27/30
+127/127 [==============================] - 13s 100ms/step - loss: 1.4219 - masked_accuracy: 0.6782 - masked_loss: 1.4247
+Epoch 28/30
+127/127 [==============================] - 12s 98ms/step - loss: 1.4335 - masked_accuracy: 0.6768 - masked_loss: 1.4332
+Epoch 29/30
+127/127 [==============================] - 13s 99ms/step - loss: 1.4373 - masked_accuracy: 0.6787 - masked_loss: 1.4357
+Epoch 30/30
+127/127 [==============================] - 13s 99ms/step - loss: 1.4275 - masked_accuracy: 0.6796 - masked_loss: 1.4243
+31/31 [==============================] - 3s 48ms/step - loss: 4.5410 - masked_accuracy: 0.4141 - masked_loss: 4.5389
+Accuracy: 0.41414350271224976, Loss: 4.538880825042725
+Train set
+He is not coming, either. (Él tampoco vendrá.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I like walking by myself. (Me gusta caminar solo.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom revealed the secret. (Tomás reveló el secreto.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I want a piece of candy. (Quiero una gominola.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Did you clean your room? (¿Limpiaste tu cuarto?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+That's the way dogs are. (Así son los perros.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I've never killed anyone. (Nunca maté a nadie.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I was trying to help you. (Estaba intentando ayudaros.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Why are you so worried? (¿Por qué están tan preocupados?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+What's this about, Tom? (¿De qué trata esto, Tom?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Have you ever been happy? (¿Has sido feliz alguna vez?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+It was raining yesterday. (Estaba lloviendo ayer.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Who's this message for? (¿Para quién es este mensaje?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+He dwells in the country. (Él vive en el campo.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+He heard the dog barking. (Oyó al perro ladrar.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Where is today's paper? (¿Dónde está el diario de hoy?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I think it's pretty cool. (Creo que es bastante mono.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom slept on the train. (Tom durmió en el tren.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom spit out the poison. (Tom escupió el veneno.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Where do you want to go? (¿A dónde quieres ir?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+How is the weather there? (¿Cómo es el clima allí?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Put a mark on this page. (Ponga una marca en esta página.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Did you hear that sound? (¿Oíste ese sonido?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I was born 20 years ago. (Nací hace 20 años.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+She is a friend of mine. (Ella es amiga mía.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+That's not my signature. (Esa no es mi firma.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom rushed to his room. (Tom huyó a su cuarto.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Turn left at the corner. (Gira a la izquierda en la esquina.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+The results were clear. (Los resultados eran claros.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+My cats are my children. (Mis gatas son mis hijas.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+It happened one year ago. (Sucedió hace un año.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+He is responsible for it. (Él es responsable de eso.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+You're such a cute boy. (¡Qué niño tan chulo eres!) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom is watching a video. (Tom está viendo un vídeo.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Do you think Tom is weak? (¿Crees que Tom es débil?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Whose glasses are these? (¿De quién son estas gafas?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I'm so much happier now. (Estoy mucho más feliz ahora.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Here's a letter for you. (Aquí hay una carta para usted.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+It's too good to be true. (Es demasiado bueno para ser cierto.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+We've run out of water. (Nos quedamos sin agua.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I'd like to return a car. (Quisiera devolver un coche.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Which skirt do you like? (¿Qué falda te gusta?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I have a pain in my back. (Tengo dolor de espalda.) -> tengo dolor de espalda .      (BLEU: 1.00)
+We have three daughters. (Tenemos tres hijas.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+The world changes a lot. (El mundo cambia mucho.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+This sounds like a trap. (Esto parece una trampa.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Nothing makes Tom happy. (Nada lo hace feliz a Tom.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+No harm will come to you. (Nada te hará daño.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom gave me some advice. (Tom me dio algunos consejos.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I'm buying you a new one. (Yo te compro uno nuevo.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+He is drawing a picture. (Está haciendo un dibujo.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I don't like this place. (No me gusta este lugar.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom opened the envelope. (Tom abrió el sobre.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I wanna get out of here! (¡Quiero salir de aquí!) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I just have one question. (Solo tengo una pregunta.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+My father is in his room. (Mi padre está en su habitación.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom usually eats alone. (Tom suele comer solo.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Almost everyone was late. (Casi todos se retrasaron.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Did you get me anything? (¿Me conseguiste algo?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Why didn't you help Tom? (¿Por qué no ayudaste a Tom?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+The auction ends Monday. (La subasta termina el lunes.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Has Tom always been fat? (¿Tom siempre ha estado gordo?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom is due back Monday. (Tom debería regresar el lunes.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I hadn't considered that. (No había considerado eso.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+You won't believe this! (¡No os lo vais a creer!) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom deserves admiration. (Tom merece admiración.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I'm comfortable with it. (Estoy cómodo con esto.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom is hiding somewhere. (Tom se está ocultando en algún lugar.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+He did not disappoint me. (Él no me decepcionó.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom isn't feeling well. (Tom no se siente bien.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+How much is the bus fare? (¿Cuánto cuesta el bus?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+My wife is a vegetarian. (Mi mujer es vegetariana.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I put cream in my coffee. (Yo le echo crema a mi café.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+They will agree on that. (Ellos estarán de acuerdo en eso.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Where can I get tickets? (¿Dónde puedo conseguir las entradas?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Do you have the tickets? (¿Lleva usted los boletos?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom didn't say a thing. (Tom no dijo nada.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Try not to be so tense. (Intenten no ponerse tan tensos.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I'm so glad I could help. (Estoy muy contento de poder ayudar.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Can we enhance the image? (¿Podemos aumentar la imagen?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+You can swim, can't you? (Sabes nadar, ¿verdad?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I hope you're listening. (Espero que estés escuchando.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I just want to visit Tom. (Solo quiero visitar a Tom.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+You'd better start now. (Mejor empieza ya.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+You guys need new shoes. (Necesitáis zapatos nuevos.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+It's clear that it's so. (Consta que es así.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Stay out of Tom's room. (Mantente fuera de la habitación de Tom.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+He's going to love this. (Le va a encantar esto.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+And what's your problem? (¿Y cuál es tu problema?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+This problem baffles me. (Encuentro este problema desconcertante.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+That's very big of you. (Eso dice mucho de ti.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom must be very lucky. (Tom debe ser muy afortunado.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom is still unemployed. (Tomás todavía no tiene trabajo.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+She's unfit for the job. (Ella es inadecuada para el trabajo.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I hate surprise parties. (Detesto las fiestas sorpresa.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Is he married or single? (¿Está casado o es soltero?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Why are you so worried? (¿Por qué está tan preocupado?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+My father won't allow it. (Mi papá no lo permitirá.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Teach me how it's done. (Enséñame cómo se hace.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Don't disobey my orders. (No desobedezca usted mis órdenes.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Average BLEU score: 0.01
+
+Test set
+Nobody's infallible. (Nadie es infalible.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+He works a lot. (Trabaja mucho.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I'll see if he is in. (Veré si él está adentro.) -> Él está con su madre .     (BLEU: 0.00)
+I wouldn't be so sure. (No estaría tan seguro.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+It can't be Tom. (Ese no puede ser Tom.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+May I go swimming? (¿Puedo irme a nadar?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+What is going on? (¿Qué hay?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Mary is a nice girl. (Mary es una muchacha maja.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+They didn't speak. (No hablaron.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+She's smaller than me. (Ella es más baja que yo.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+We waited till 2:30. (Esperamos hasta las dos y media.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I agree to his plan. (Yo estoy de acuerdo con su plan.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Please stop talking. (Por favor, cállate.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Are you angry with me? (¿Estás enfadado conmigo?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I miss him. (Le echo de menos.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom gave in. (Tom cedió.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+See you Monday. (Te veo el lunes.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+We have three planes. (Tenemos tres aviones.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Did you find something? (¿Encontraste algo?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Are you sleeping, Tom? (Tom, ¿estás dormido?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+He is overconfident. (Es soberbio.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I want your respect. (Yo quiero su respeto.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I can do it. (Puedo hacerlo.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I left home at seven. (Salí de casa a las siete.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+When do you write? (¿Cuándo escribes?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+My friend is a teacher. (Mi amiga es profesora.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Aren't you hot? (¿No tienes calor?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+These books are ours. (Estos libros son nuestros.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Who wrote this? (¿Quién escribió eso?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I did that all morning. (Lo hice durante toda la mañana.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I'm new in town. (Soy nuevo en la ciudad.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+You alone can do this. (Sólo tú puedes hacer esto.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I want to go to sleep. (Quiero irme a dormir.) -> quiero ir a la universidad .     (BLEU: 0.00)
+These are mine. (Estos son míos.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+We sacrifice a lot. (Nos sacrificamos un montón.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I'm in Boston. (Estoy en Boston.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I could kiss you. (Podría besarte.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+You're shivering. (Estás temblando.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Watch your language. (No digas palabrotas.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Did you win the race? (¿Ganaste la carrera?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+It won't take long. (No tardará mucho tiempo.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom is lying to you. (Tom te está mintiendo.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+We knew this. (Sabíamos esto.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I ate three hot dogs. (Comí tres panchos.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+You're Tom, right? (Eres Tom, ¿no?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I promised not to tell. (Prometí no decir.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+You're the boss. (Tú eres el jefe.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I can't sleep well. (No logro dormir bien.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom is angry at Mary. (Tom está enfadado con Mary.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Would you like to go? (¿Te gustaría ir?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Do you like cheese? (¿Te gusta el queso?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom liked Mary. (A Tom le gustaba Mary.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+It's not our fault. (No es culpa nuestra.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Give me a hammer. (Deme un martillo.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+We just want to talk. (Solo queremos hablar.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+His car has no wheels. (Su auto no tiene ruedas.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+That's pseudoscience. (Eso es pseudociencia.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom is in bed, asleep. (Tom está en la cama durmiendo.) -> tomás está en la cantina .     (BLEU: 0.00)
+Tom crashed. (Tom se la pegó.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+You will all die. (Todos ustedes morirán.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I just want to be safe. (Sólo quiero estar a salvo.) -> sólo quiero ayudar a tom .     (BLEU: 0.00)
+I've gotten better. (He mejorado.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I let them go. (Yo los dejé ir.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+You're very astute. (Sos muy astuta.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+He seems honest. (Él parece honesto.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Why do you lie? (¿Por qué mientes?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Weren't you amused? (¿No estabas entretenido?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Did something happen? (¿Pasó algo?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+See you. (Hasta luego.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Whose turn is it next? (¿A quién le toca ahora?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Now pay attention. (Ahora pon atención.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+He has a ticket. (Él tiene un boleto.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I have no money. (No tengo un mango.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+He is always studying. (Siempre está estudiando.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+He moved to Tokyo. (Él se trasladó a Tokio.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Who'll accompany me? (¿Quién me acompañará?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+They're in the car. (Están en el auto.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Don't lie to me again. (No me mientas de nuevo.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+It's easy to see this. (Es fácil ver esto.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+He heard a noise. (Él escuchó un ruido.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I hate sushi. (Odio el sushi.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+We keep two goats. (Tenemos dos cabras.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+They left without me. (Se fueron sin mí.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+You have to stay here. (Debes quedarte aquí.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Is Tom a scientist? (¿Tom es científico?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+His music is too noisy. (Su música es demasiado ruidosa.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I know how old you are. (Sé tu edad.) -> sé que tú sabe usted .     (BLEU: 0.00)
+What are you cooking? (¿Qué están cocinando?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom needs friends. (Tom necesita amigos.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+That's my dog. (Ese es mi perro.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I will go on foot. (Iré andando.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Where are you hiding? (¿Dónde se están escondiendo?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Yours are better. (Las vuestras son mejores.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Enjoy life. (Disfruta la vida.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+It's monkey meat. (Es carne de mono.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Speak quietly. (Habla calladito.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+I would like an apple. (Me gustaría una manzana.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Tom can't speak. (Tom no puede hablar.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+How tall is he? (¿Cuánto mide él?) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+They're old friends. (Ellos son viejos amigos.) -> no puedo soportar ese ruido .     (BLEU: 0.00)
+Average BLEU score: 0.00
+Epoch 1/30
+127/127 [==============================] - 23s 97ms/step - loss: 3.6454 - masked_accuracy: 0.2203 - masked_loss: 5.3115
+Epoch 2/30
+127/127 [==============================] - 13s 102ms/step - loss: 3.0815 - masked_accuracy: 0.2844 - masked_loss: 4.4569
+Epoch 3/30
+127/127 [==============================] - 12s 98ms/step - loss: 2.6409 - masked_accuracy: 0.3528 - masked_loss: 3.8537
+Epoch 4/30
+127/127 [==============================] - 12s 95ms/step - loss: 2.1425 - masked_accuracy: 0.4426 - masked_loss: 3.1081
+Epoch 5/30
+127/127 [==============================] - 12s 96ms/step - loss: 1.6629 - masked_accuracy: 0.5142 - masked_loss: 2.4262
+Epoch 6/30
+127/127 [==============================] - 12s 95ms/step - loss: 1.2550 - masked_accuracy: 0.5933 - masked_loss: 1.8180
+Epoch 7/30
+127/127 [==============================] - 12s 97ms/step - loss: 0.9285 - masked_accuracy: 0.6807 - masked_loss: 1.3392
+Epoch 8/30
+127/127 [==============================] - 12s 97ms/step - loss: 0.6776 - masked_accuracy: 0.7546 - masked_loss: 0.9844
+Epoch 9/30
+127/127 [==============================] - 12s 97ms/step - loss: 0.5013 - masked_accuracy: 0.8170 - masked_loss: 0.7355
+Epoch 10/30
+127/127 [==============================] - 12s 94ms/step - loss: 0.3983 - masked_accuracy: 0.8549 - masked_loss: 0.5792
+Epoch 11/30
+127/127 [==============================] - 12s 96ms/step - loss: 0.3084 - masked_accuracy: 0.8889 - masked_loss: 0.4483
+Epoch 12/30
+127/127 [==============================] - 12s 96ms/step - loss: 0.2569 - masked_accuracy: 0.9094 - masked_loss: 0.3737
+Epoch 13/30
+127/127 [==============================] - 12s 95ms/step - loss: 0.2165 - masked_accuracy: 0.9252 - masked_loss: 0.3151
+Epoch 14/30
+127/127 [==============================] - 12s 95ms/step - loss: 0.1852 - masked_accuracy: 0.9378 - masked_loss: 0.2681
+Epoch 15/30
+127/127 [==============================] - 12s 97ms/step - loss: 0.1703 - masked_accuracy: 0.9404 - masked_loss: 0.2499
+Epoch 16/30
+127/127 [==============================] - 12s 98ms/step - loss: 0.1574 - masked_accuracy: 0.9462 - masked_loss: 0.2289
+Epoch 17/30
+127/127 [==============================] - 12s 95ms/step - loss: 0.1345 - masked_accuracy: 0.9530 - masked_loss: 0.1952
+Epoch 18/30
+127/127 [==============================] - 12s 97ms/step - loss: 0.1288 - masked_accuracy: 0.9565 - masked_loss: 0.1868
+Epoch 19/30
+127/127 [==============================] - 12s 97ms/step - loss: 0.1255 - masked_accuracy: 0.9560 - masked_loss: 0.1831
+Epoch 20/30
+127/127 [==============================] - 12s 96ms/step - loss: 0.1175 - masked_accuracy: 0.9592 - masked_loss: 0.1695
+Epoch 21/30
+127/127 [==============================] - 12s 97ms/step - loss: 0.1124 - masked_accuracy: 0.9600 - masked_loss: 0.1645
+Epoch 22/30
+127/127 [==============================] - 12s 97ms/step - loss: 0.1050 - masked_accuracy: 0.9618 - masked_loss: 0.1531
+Epoch 23/30
+127/127 [==============================] - 12s 97ms/step - loss: 0.1008 - masked_accuracy: 0.9629 - masked_loss: 0.1477
+Epoch 24/30
+127/127 [==============================] - 13s 101ms/step - loss: 0.0966 - masked_accuracy: 0.9647 - masked_loss: 0.1407
+Epoch 25/30
+127/127 [==============================] - 12s 96ms/step - loss: 0.0966 - masked_accuracy: 0.9648 - masked_loss: 0.1402
+Epoch 26/30
+127/127 [==============================] - 12s 98ms/step - loss: 0.0940 - masked_accuracy: 0.9653 - masked_loss: 0.1366
+Epoch 27/30
+127/127 [==============================] - 13s 99ms/step - loss: 0.0991 - masked_accuracy: 0.9638 - masked_loss: 0.1438
+Epoch 28/30
+127/127 [==============================] - 12s 97ms/step - loss: 0.1026 - masked_accuracy: 0.9632 - masked_loss: 0.1486
+Epoch 29/30
+127/127 [==============================] - 13s 100ms/step - loss: 0.0974 - masked_accuracy: 0.9639 - masked_loss: 0.1428
+Epoch 30/30
+127/127 [==============================] - 12s 96ms/step - loss: 0.0989 - masked_accuracy: 0.9634 - masked_loss: 0.1438
+31/31 [==============================] - 4s 40ms/step - loss: 2.4305 - masked_accuracy: 0.5908 - masked_loss: 3.6347
+Accuracy: 0.590776801109314, Loss: 3.6346983909606934
+Train set
+He is not coming, either. (Él tampoco vendrá.) -> Él tampoco vendrá .       (BLEU: 1.00)
+I like walking by myself. (Me gusta caminar solo.) -> me gusta caminar solo .      (BLEU: 1.00)
+Tom revealed the secret. (Tomás reveló el secreto.) -> tomás reveló el secreto .      (BLEU: 1.00)
+I want a piece of candy. (Quiero una gominola.) -> quiero una gominola .       (BLEU: 1.00)
+Did you clean your room? (¿Limpiaste tu cuarto?) -> ¿ habéis ordenado vuestra habitación ?     (BLEU: 0.00)
+That's the way dogs are. (Así son los perros.) -> así son los perros .      (BLEU: 1.00)
+I've never killed anyone. (Nunca maté a nadie.) -> nunca estuve nunca nunca .      (BLEU: 0.00)
+I was trying to help you. (Estaba intentando ayudaros.) -> estaba intentando ayudaros .       (BLEU: 1.00)
+Why are you so worried? (¿Por qué están tan preocupados?) -> ¿ por qué estás tan preocupado ?    (BLEU: 0.00)
+What's this about, Tom? (¿De qué trata esto, Tom?) -> ¿ de qué trata este tom ?    (BLEU: 0.59)
+Have you ever been happy? (¿Has sido feliz alguna vez?) -> ¿ has sido feliz alguna vez ?    (BLEU: 1.00)
+It was raining yesterday. (Estaba lloviendo ayer.) -> estaba lloviendo ayer .       (BLEU: 1.00)
+Who's this message for? (¿Para quién es este mensaje?) -> ¿ para quién es este mensaje ?    (BLEU: 1.00)
+He dwells in the country. (Él vive en el campo.) -> Él brincó en el habitación .     (BLEU: 0.00)
+He heard the dog barking. (Oyó al perro ladrar.) -> oyó al perro ladrar .      (BLEU: 1.00)
+Where is today's paper? (¿Dónde está el diario de hoy?) -> ¿ dónde está el periódico de hoy ?   (BLEU: 0.71)
+I think it's pretty cool. (Creo que es bastante mono.) -> pienso que es bastante cuco .     (BLEU: 0.00)
+Tom slept on the train. (Tom durmió en el tren.) -> tom se subió en el ascensor .    (BLEU: 0.00)
+Tom spit out the poison. (Tom escupió el veneno.) -> tom bajó el limón .      (BLEU: 0.00)
+Where do you want to go? (¿A dónde quieres ir?) -> ¿ quieres ir ir ?      (BLEU: 0.00)
+How is the weather there? (¿Cómo es el clima allí?) -> ¿ cómo es el clima allí ?    (BLEU: 1.00)
+Put a mark on this page. (Ponga una marca en esta página.) -> una una polaco con dulces .     (BLEU: 0.00)
+Did you hear that sound? (¿Oíste ese sonido?) -> ¿ has oído ese sonido ?     (BLEU: 0.00)
+I was born 20 years ago. (Nací hace 20 años.) -> nací hace 20 años .      (BLEU: 1.00)
+She is a friend of mine. (Ella es amiga mía.) -> ella es amiga mía .      (BLEU: 1.00)
+That's not my signature. (Esa no es mi firma.) -> esa no es mi firma .     (BLEU: 1.00)
+Tom rushed to his room. (Tom huyó a su cuarto.) -> tom huyó a su cuarto .     (BLEU: 1.00)
+Turn left at the corner. (Gira a la izquierda en la esquina.) -> la miré en la puerta .     (BLEU: 0.00)
+The results were clear. (Los resultados eran claros.) -> los resultados estaban claros .      (BLEU: 0.00)
+My cats are my children. (Mis gatas son mis hijas.) -> mis gatos son mis hijos .     (BLEU: 0.00)
+It happened one year ago. (Sucedió hace un año.) -> sucedió hace un año .      (BLEU: 1.00)
+He is responsible for it. (Él es responsable de eso.) -> Él es responsable de eso .     (BLEU: 1.00)
+You're such a cute boy. (¡Qué niño tan chulo eres!) -> ¡ qué niño tan chulo eres !    (BLEU: 1.00)
+Tom is watching a video. (Tom está viendo un vídeo.) -> tom está viendo un vídeo .     (BLEU: 1.00)
+Do you think Tom is weak? (¿Crees que Tom es débil?) -> ¿ crees que tom es muerto ?    (BLEU: 0.75)
+Whose glasses are these? (¿De quién son estas gafas?) -> ¿ de quién son estas gafas ?    (BLEU: 1.00)
+I'm so much happier now. (Estoy mucho más feliz ahora.) -> estoy mucho más feliz ahora .     (BLEU: 1.00)
+Here's a letter for you. (Aquí hay una carta para usted.) -> aquí hay una carta para usted .    (BLEU: 1.00)
+It's too good to be true. (Es demasiado bueno para ser cierto.) -> es demasiado lindo para ser verdad .    (BLEU: 0.00)
+We've run out of water. (Nos quedamos sin agua.) -> nos quedamos sin agua .      (BLEU: 1.00)
+I'd like to return a car. (Quisiera devolver un coche.) -> quisiera devolver un coche .      (BLEU: 1.00)
+Which skirt do you like? (¿Qué falda te gusta?) -> ¿ qué falda te gusta ?     (BLEU: 1.00)
+I have a pain in my back. (Tengo dolor de espalda.) -> tengo dolor de espalda .      (BLEU: 1.00)
+We have three daughters. (Tenemos tres hijas.) -> tenemos tres nietos .       (BLEU: 0.00)
+The world changes a lot. (El mundo cambia mucho.) -> el mundo cambia mucho .      (BLEU: 1.00)
+This sounds like a trap. (Esto parece una trampa.) -> esto suena a una trampa .     (BLEU: 0.00)
+Nothing makes Tom happy. (Nada lo hace feliz a Tom.) -> nada lo hace feliz a tom .    (BLEU: 1.00)
+No harm will come to you. (Nada te hará daño.) -> nada te hará daño .      (BLEU: 1.00)
+Tom gave me some advice. (Tom me dio algunos consejos.) -> tom me dio algunos consejos .     (BLEU: 1.00)
+I'm buying you a new one. (Yo te compro uno nuevo.) -> yo te compro uno nuevo .     (BLEU: 1.00)
+He is drawing a picture. (Está haciendo un dibujo.) -> está haciendo un dibujo .      (BLEU: 1.00)
+I don't like this place. (No me gusta este lugar.) -> no me gusta este lugar .     (BLEU: 1.00)
+Tom opened the envelope. (Tom abrió el sobre.) -> tom abrió el sobre .      (BLEU: 1.00)
+I wanna get out of here! (¡Quiero salir de aquí!) -> ¡ quiero salir de aquí !     (BLEU: 1.00)
+I just have one question. (Solo tengo una pregunta.) -> solo solo una espacio .      (BLEU: 0.00)
+My father is in his room. (Mi padre está en su habitación.) -> mi padre está en su habitación .    (BLEU: 1.00)
+Tom usually eats alone. (Tom suele comer solo.) -> tom esperó yo enfermo .      (BLEU: 0.00)
+Almost everyone was late. (Casi todos se retrasaron.) -> casi todos se retrasaron .      (BLEU: 1.00)
+Did you get me anything? (¿Me conseguiste algo?) -> ¿ me trajiste algo ?      (BLEU: 0.00)
+Why didn't you help Tom? (¿Por qué no ayudaste a Tom?) -> ¿ por qué no ayudaste a tom ?   (BLEU: 1.00)
+The auction ends Monday. (La subasta termina el lunes.) -> la subasta termina el lunes .     (BLEU: 1.00)
+Has Tom always been fat? (¿Tom siempre ha estado gordo?) -> ¿ tom siempre ha estado gordo ?    (BLEU: 1.00)
+Tom is due back Monday. (Tom debería regresar el lunes.) -> tom está libre el lunes .     (BLEU: 0.00)
+I hadn't considered that. (No había considerado eso.) -> no había eso de eso .     (BLEU: 0.00)
+You won't believe this! (¡No os lo vais a creer!) -> ¡ no os lo vais a creer !   (BLEU: 1.00)
+Tom deserves admiration. (Tom merece admiración.) -> tom merece admiración .       (BLEU: 1.00)
+I'm comfortable with it. (Estoy cómodo con esto.) -> estoy cómodo con esto .      (BLEU: 1.00)
+Tom is hiding somewhere. (Tom se está ocultando en algún lugar.) -> tom se está ocultando en algún lugar .   (BLEU: 1.00)
+He did not disappoint me. (Él no me decepcionó.) -> Él no me decepcionó .      (BLEU: 1.00)
+Tom isn't feeling well. (Tom no se siente bien.) -> tom no se está sintiendo bien .    (BLEU: 0.00)
+How much is the bus fare? (¿Cuánto cuesta el bus?) -> ¿ cuánto es el vagón sorpresa ?    (BLEU: 0.00)
+My wife is a vegetarian. (Mi mujer es vegetariana.) -> mi mujer es vegetariana .      (BLEU: 1.00)
+I put cream in my coffee. (Yo le echo crema a mi café.) -> yo le echo crema a mi café .   (BLEU: 1.00)
+They will agree on that. (Ellos estarán de acuerdo en eso.) -> ellos estarán de acuerdo en eso .    (BLEU: 1.00)
+Where can I get tickets? (¿Dónde puedo conseguir las entradas?) -> ¿ dónde puedo conseguir las entradas ?    (BLEU: 1.00)
+Do you have the tickets? (¿Lleva usted los boletos?) -> ¿ lleva usted los boletos ?     (BLEU: 1.00)
+Tom didn't say a thing. (Tom no dijo nada.) -> tom no quiere una problema .     (BLEU: 0.00)
+Try not to be so tense. (Intenten no ponerse tan tensos.) -> tratad de no poneros tan tensas .    (BLEU: 0.00)
+I'm so glad I could help. (Estoy muy contento de poder ayudar.) -> estoy muy contento de poder ayudar .    (BLEU: 1.00)
+Can we enhance the image? (¿Podemos aumentar la imagen?) -> ¿ podemos aumentar la imagen ?     (BLEU: 1.00)
+You can swim, can't you? (Sabes nadar, ¿verdad?) -> ¿ puedes teclear , o no ?    (BLEU: 0.00)
+I hope you're listening. (Espero que estés escuchando.) -> espero que escuchando .       (BLEU: 0.00)
+I just want to visit Tom. (Solo quiero visitar a Tom.) -> solo quiero visitar a tom .     (BLEU: 1.00)
+You'd better start now. (Mejor empieza ya.) -> mejor empieza ya .       (BLEU: 1.00)
+You guys need new shoes. (Necesitáis zapatos nuevos.) -> necesitáis zapatos nuevos .       (BLEU: 1.00)
+It's clear that it's so. (Consta que es así.) -> consta que es así .      (BLEU: 1.00)
+Stay out of Tom's room. (Mantente fuera de la habitación de Tom.) -> ¡ de la habitación de tomás .    (BLEU: 0.49)
+He's going to love this. (Le va a encantar esto.) -> le va a encantar esto .     (BLEU: 1.00)
+And what's your problem? (¿Y cuál es tu problema?) -> ¿ y cuál es tu problema ?    (BLEU: 1.00)
+This problem baffles me. (Encuentro este problema desconcertante.) -> este problema me desconcierta .      (BLEU: 0.00)
+That's very big of you. (Eso dice mucho de ti.) -> eso dice mucho de ti .     (BLEU: 1.00)
+Tom must be very lucky. (Tom debe ser muy afortunado.) -> tom debe ser muy afortunado .     (BLEU: 1.00)
+Tom is still unemployed. (Tomás todavía no tiene trabajo.) -> tomás todavía es desocupado .      (BLEU: 0.00)
+She's unfit for the job. (Ella es inadecuada para el trabajo.) -> ella es inadecuada para el trabajo .    (BLEU: 1.00)
+I hate surprise parties. (Detesto las fiestas sorpresa.) -> detesto las fiestas sorpresa .      (BLEU: 1.00)
+Is he married or single? (¿Está casado o es soltero?) -> ¿ es casado o es soltero ?    (BLEU: 0.81)
+Why are you so worried? (¿Por qué está tan preocupado?) -> ¿ por qué estás tan preocupado ?    (BLEU: 0.00)
+My father won't allow it. (Mi papá no lo permitirá.) -> mi papá no lo permitirá .     (BLEU: 1.00)
+Teach me how it's done. (Enséñame cómo se hace.) -> enséñame cómo se hace .      (BLEU: 1.00)
+Don't disobey my orders. (No desobedezca usted mis órdenes.) -> no desobedezca usted mis órdenes .     (BLEU: 1.00)
+Average BLEU score: 0.68
+
+Test set
+Nobody's infallible. (Nadie es infalible.) -> nadie es indispensable .       (BLEU: 0.00)
+He works a lot. (Trabaja mucho.) -> Él vive mucho .       (BLEU: 0.00)
+I'll see if he is in. (Veré si él está adentro.) -> me pregunto entrar en él .     (BLEU: 0.00)
+I wouldn't be so sure. (No estaría tan seguro.) -> no he sido tan cansado .     (BLEU: 0.00)
+It can't be Tom. (Ese no puede ser Tom.) -> no puede ser ser tom .     (BLEU: 0.00)
+May I go swimming? (¿Puedo irme a nadar?) -> ¿ puedo que a ir a nadar .   (BLEU: 0.00)
+What is going on? (¿Qué hay?) -> ¿ a qué hora ir ?     (BLEU: 0.00)
+Mary is a nice girl. (Mary es una muchacha maja.) -> mary es una niña educada .     (BLEU: 0.00)
+They didn't speak. (No hablaron.) -> ellos no hablan .       (BLEU: 0.00)
+She's smaller than me. (Ella es más baja que yo.) -> ella es más más que yo .    (BLEU: 0.00)
+We waited till 2:30. (Esperamos hasta las dos y media.) -> estaremos hasta hasta las dos y media .   (BLEU: 0.78)
+I agree to his plan. (Yo estoy de acuerdo con su plan.) -> estoy de acuerdo con su plan .    (BLEU: 0.87)
+Please stop talking. (Por favor, cállate.) -> por favor , responde por por favor .   (BLEU: 0.00)
+Are you angry with me? (¿Estás enfadado conmigo?) -> ¿ estás coqueteando conmigo para mí ?    (BLEU: 0.00)
+I miss him. (Le echo de menos.) -> me he encontré de enfermedad .     (BLEU: 0.00)
+Tom gave in. (Tom cedió.) -> tom se dio en sus hijos .    (BLEU: 0.00)
+See you Monday. (Te veo el lunes.) -> te lunes el lunes .      (BLEU: 0.00)
+We have three planes. (Tenemos tres aviones.) -> tenemos tres nietos .       (BLEU: 0.00)
+Did you find something? (¿Encontraste algo?) -> ¿ recuerdas algo ?       (BLEU: 0.00)
+Are you sleeping, Tom? (Tom, ¿estás dormido?) -> ¿ estás estás colando tom ?     (BLEU: 0.00)
+He is overconfident. (Es soberbio.) -> Él es responsable .       (BLEU: 0.00)
+I want your respect. (Yo quiero su respeto.) -> quiero que tu guitarra .      (BLEU: 0.00)
+I can do it. (Puedo hacerlo.) -> lo hacer hacer hacer solo .     (BLEU: 0.00)
+I left home at seven. (Salí de casa a las siete.) -> se volví a la casa de casa .   (BLEU: 0.00)
+When do you write? (¿Cuándo escribes?) -> ¿ cuándo te has olvidado ?     (BLEU: 0.00)
+My friend is a teacher. (Mi amiga es profesora.) -> mi hijo es muy amigo .     (BLEU: 0.00)
+Aren't you hot? (¿No tienes calor?) -> ¿ no tienes los sonido ?     (BLEU: 0.00)
+These books are ours. (Estos libros son nuestros.) -> estos libros de de .      (BLEU: 0.00)
+Who wrote this? (¿Quién escribió eso?) -> ¿ quién quién pertenece este hermano ?    (BLEU: 0.00)
+I did that all morning. (Lo hice durante toda la mañana.) -> ayer todo todos .       (BLEU: 0.00)
+I'm new in town. (Soy nuevo en la ciudad.) -> me estado en una helado .     (BLEU: 0.00)
+You alone can do this. (Sólo tú puedes hacer esto.) -> te has hacer hacer esto .     (BLEU: 0.00)
+I want to go to sleep. (Quiero irme a dormir.) -> quiero ir a dormir .      (BLEU: 0.00)
+These are mine. (Estos son míos.) -> estas gafas son míos .      (BLEU: 0.00)
+We sacrifice a lot. (Nos sacrificamos un montón.) -> nos estábamos mucho .       (BLEU: 0.00)
+I'm in Boston. (Estoy en Boston.) -> estoy en en boston .      (BLEU: 0.00)
+I could kiss you. (Podría besarte.) -> te he visto demasiado ti .     (BLEU: 0.00)
+You're shivering. (Estás temblando.) -> estás estás durmiendo .       (BLEU: 0.00)
+Watch your language. (No digas palabrotas.) -> tu leí es tu fría .     (BLEU: 0.00)
+Did you win the race? (¿Ganaste la carrera?) -> ¿ viste el imagen ?      (BLEU: 0.00)
+It won't take long. (No tardará mucho tiempo.) -> no tomará mucho tiempo .      (BLEU: 0.00)
+Tom is lying to you. (Tom te está mintiendo.) -> tom te está manipulando .      (BLEU: 0.00)
+We knew this. (Sabíamos esto.) -> superarás esto a esto .      (BLEU: 0.00)
+I ate three hot dogs. (Comí tres panchos.) -> he días tres cosas .      (BLEU: 0.00)
+You're Tom, right? (Eres Tom, ¿no?) -> eres tom , ¿ verdad , tom ?   (BLEU: 0.58)
+I promised not to tell. (Prometí no decir.) -> no pude que no idea .     (BLEU: 0.00)
+You're the boss. (Tú eres el jefe.) -> eres eres el fuego .      (BLEU: 0.00)
+I can't sleep well. (No logro dormir bien.) -> no puedo puedo bien bien .     (BLEU: 0.00)
+Tom is angry at Mary. (Tom está enfadado con Mary.) -> tom está está deuda con mary .    (BLEU: 0.00)
+Would you like to go? (¿Te gustaría ir?) -> ¿ te gustaría ir ?      (BLEU: 1.00)
+Do you like cheese? (¿Te gusta el queso?) -> ¿ te gusta hacer ?      (BLEU: 0.00)
+Tom liked Mary. (A Tom le gustaba Mary.) -> tom tom se sangraba tom .     (BLEU: 0.00)
+It's not our fault. (No es culpa nuestra.) -> no es nuestro culpa .      (BLEU: 0.00)
+Give me a hammer. (Deme un martillo.) -> dame un segunda polaco .      (BLEU: 0.00)
+We just want to talk. (Solo queremos hablar.) -> sólo necesitamos relajarnos .       (BLEU: 0.00)
+His car has no wheels. (Su auto no tiene ruedas.) -> su coche no tiene con su coche .   (BLEU: 0.00)
+That's pseudoscience. (Eso es pseudociencia.) -> eso es malo malo .      (BLEU: 0.00)
+Tom is in bed, asleep. (Tom está en la cama durmiendo.) -> tom está en en la      (BLEU: 0.00)
+Tom crashed. (Tom se la pegó.) -> tom se presentó con mary .     (BLEU: 0.00)
+You will all die. (Todos ustedes morirán.) -> te sorprendiste a todos .      (BLEU: 0.00)
+I just want to be safe. (Sólo quiero estar a salvo.) -> solo quiero ser feliz .      (BLEU: 0.00)
+I've gotten better. (He mejorado.) -> me sido mucho mejor .      (BLEU: 0.00)
+I let them go. (Yo los dejé ir.) -> me iré a ir .      (BLEU: 0.00)
+You're very astute. (Sos muy astuta.) -> eres muy perspicaz .       (BLEU: 0.00)
+He seems honest. (Él parece honesto.) -> Él escribió muy rápido .      (BLEU: 0.00)
+Why do you lie? (¿Por qué mientes?) -> ¿ por qué no te sientas ?    (BLEU: 0.00)
+Weren't you amused? (¿No estabas entretenido?) -> ¿ no te molesta ?      (BLEU: 0.00)
+Did something happen? (¿Pasó algo?) -> ¿ cuándo más algo ?      (BLEU: 0.00)
+See you. (Hasta luego.) -> te veré te ti .      (BLEU: 0.00)
+Whose turn is it next? (¿A quién le toca ahora?) -> ¿ de quién se la hecho ?    (BLEU: 0.00)
+Now pay attention. (Ahora pon atención.) -> tom cruzó inmediatamente .       (BLEU: 0.00)
+He has a ticket. (Él tiene un boleto.) -> Él tiene un coche .      (BLEU: 0.00)
+I have no money. (No tengo un mango.) -> no tengo nada dinero .      (BLEU: 0.00)
+He is always studying. (Siempre está estudiando.) -> Él siempre está mintiendo .      (BLEU: 0.00)
+He moved to Tokyo. (Él se trasladó a Tokio.) -> Él le invitó a cenar .     (BLEU: 0.00)
+Who'll accompany me? (¿Quién me acompañará?) -> ¿ quién me ha comido ?     (BLEU: 0.00)
+They're in the car. (Están en el auto.) -> ellos en en el carro .     (BLEU: 0.00)
+Don't lie to me again. (No me mientas de nuevo.) -> no no tanta nada de nuevo .    (BLEU: 0.00)
+It's easy to see this. (Es fácil ver esto.) -> es fácil de hacer esto .     (BLEU: 0.00)
+He heard a noise. (Él escuchó un ruido.) -> Él tuvo un problema .      (BLEU: 0.00)
+I hate sushi. (Odio el sushi.) -> odio el dinero bien el dinero .    (BLEU: 0.00)
+We keep two goats. (Tenemos dos cabras.) -> tenemos dos dos mayores .      (BLEU: 0.00)
+They left without me. (Se fueron sin mí.) -> ellos ellos los niños .      (BLEU: 0.00)
+You have to stay here. (Debes quedarte aquí.) -> tienen que haber venido .      (BLEU: 0.00)
+Is Tom a scientist? (¿Tom es científico?) -> ¿ es un escrito de tom de tom ?  (BLEU: 0.00)
+His music is too noisy. (Su música es demasiado ruidosa.) -> su hija es doce .      (BLEU: 0.00)
+I know how old you are. (Sé tu edad.) -> sé que sé las cortinas .     (BLEU: 0.00)
+What are you cooking? (¿Qué están cocinando?) -> ¿ qué estás estás llegar ?     (BLEU: 0.00)
+Tom needs friends. (Tom necesita amigos.) -> tom necesita ser arrogante .      (BLEU: 0.00)
+That's my dog. (Ese es mi perro.) -> este es mi perro a tom .    (BLEU: 0.00)
+I will go on foot. (Iré andando.) -> se inglés a la tren .     (BLEU: 0.00)
+Where are you hiding? (¿Dónde se están escondiendo?) -> ¿ de dónde estás mirando ?     (BLEU: 0.00)
+Yours are better. (Las vuestras son mejores.) -> tus monos es muy inteligentes .     (BLEU: 0.00)
+Enjoy life. (Disfruta la vida.) -> con veces lado la vida .     (BLEU: 0.00)
+It's monkey meat. (Es carne de mono.) -> es perfectamente embargo carne .      (BLEU: 0.00)
+Speak quietly. (Habla calladito.) -> el prohíbe escupir .       (BLEU: 0.00)
+I would like an apple. (Me gustaría una manzana.) -> me equivoqué una gran oportunidad .     (BLEU: 0.00)
+Tom can't speak. (Tom no puede hablar.) -> tom no sabe hablar .      (BLEU: 0.00)
+How tall is he? (¿Cuánto mide él?) -> ¿ cómo se se meta ?     (BLEU: 0.00)
+They're old friends. (Ellos son viejos amigos.) -> son dos amigos .       (BLEU: 0.00)
+Average BLEU score: 0.03

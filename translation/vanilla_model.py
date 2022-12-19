@@ -1,10 +1,5 @@
 import tensorflow as tf
 
-import random
-
-from prepare_dataset import *
-from bleu import *
-
 class Encoder(tf.keras.layers.Layer):
     def __init__(self, text_processor, rnn_units):
         super().__init__()
@@ -46,8 +41,6 @@ class Decoder(tf.keras.layers.Layer):
         self.embedding = tf.keras.layers.Embedding(
             self.vocab_size, rnn_units, mask_zero=True)
 
-        self.attention = tf.keras.layers.Attention()
-
         self.rnn = tf.keras.layers.GRU(
             rnn_units, return_sequences=True, return_state=True)
 
@@ -60,11 +53,8 @@ class Decoder(tf.keras.layers.Layer):
         x, ctx = x
         x = self.embedding(x)
 
-        
         ctx = ctx[:, -1, :]
-
         ctx = tf.tile(tf.expand_dims(ctx, 1), [1, tf.shape(x)[1], 1])
-
         x = tf.concat([x, ctx], axis=-1)
         
         x, state = self.rnn(x, initial_state=state, training=training)
@@ -90,8 +80,9 @@ class Decoder(tf.keras.layers.Layer):
 
     def tokens_to_text(self, tokens):
         words = self.id_to_word(tokens)
-        result = tf.strings.reduce_join(words, axis=-1, separator=' ')
-        return result.numpy()
+        results = tf.strings.reduce_join(words, axis=-1, separator=' ').numpy()
+        return [result.decode('utf-8') for result in results]
+
 
     def get_next_token(self, next_token, context, state, done):
         logits, state = self((next_token, context), state, return_state=True)
@@ -126,73 +117,3 @@ class Seq2Seq(tf.keras.Model):
         tokens = tf.concat(tokens, axis=1)
         result = self.decoder.tokens_to_text(tokens)
         return result
-
-
-def masked_loss(y_true, y_pred):
-    # Because we pad tokens with 0, we have to calculate the loss only on the non-zero tokens
-    loss = tf.keras.losses.SparseCategoricalCrossentropy(
-        from_logits=True, reduction='none')(y_true, y_pred)
-
-    mask = tf.cast(y_true != 0, dtype=loss.dtype)
-    loss *= mask
-
-    return tf.reduce_sum(loss) / tf.reduce_sum(mask)
-
-
-def masked_accuracy(y_true, y_pred):
-    # Same thing for accuracy
-    y_pred = tf.cast(tf.argmax(y_pred, axis=-1), dtype=y_true.dtype)
-    matched = tf.cast(tf.equal(y_true, y_pred), dtype=y_true.dtype)
-    mask = tf.cast(y_true != 0, dtype=matched.dtype)
-    return tf.reduce_sum(matched) / tf.reduce_sum(mask)
-
-
-MAX_VOCAB_SIZE = 10**6
-
-train_coeff = 0.8
-
-translations = load_translations_from_file("spa-small.txt")
-translations, test_translations = translations[int(len(translations) * train_coeff):], translations[:int(len(translations) * train_coeff)]
-
-
-train_ds, test_ds = datasets_from_translations(translations)
-
-context_text_preprocessor, target_text_preprocessor = make_text_preprocessors(
-    MAX_VOCAB_SIZE, train_ds)
-train_ds = process_dataset(
-    train_ds, context_text_preprocessor, target_text_preprocessor)
-
-test_ds = process_dataset(
-    test_ds, context_text_preprocessor, target_text_preprocessor)
-
-RNN_UNITS = 1024
-model = Seq2Seq(context_text_preprocessor, target_text_preprocessor, RNN_UNITS)
-
-model.compile(optimizer='adam', loss=masked_loss,
-              metrics=[masked_accuracy, masked_loss])
-model.fit(train_ds, epochs=50)
-
-# evaluate on test set
-loss, acc, _ =  model.evaluate(test_ds)
-print(f"EVALUTATION - Loss: {loss}, Accuracy: {acc}")
-
-
-# Choose 10 random sentences from train translations
-train_sample = random.sample(translations, 10)
-test_sample = random.sample(test_translations, 10)
-
-# Translate them
-
-print("Train sample:")
-for text, target in train_sample:
-    translated = model.translate([text])[0].decode('utf-8')
-    bleu_score = bleu(target, translated)
-
-    print(f"{text} ({target}) -> {translated} (BLEU: {bleu_score:.2f})")
-
-
-print("Test sample:")
-for text, target in test_sample:
-    translated = model.translate([text])[0].decode('utf-8')
-    bleu_score = bleu(target, translated)
-    print(f"{text} ({target}) -> {translated} (BLEU: {bleu_score:.2f})")

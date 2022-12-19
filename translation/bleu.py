@@ -3,10 +3,12 @@ import numpy as np
 from prepare_dataset import standardize_text
 
 def bleu(original, translated, max_ngram=4):
-
     # Standardize and remove <bos> and <eos> tokens
     original_tokens = standardize_text(original).numpy().decode('utf-8').split()[1:-1]
     translated_tokens = standardize_text(translated).numpy().decode('utf-8').split()[1:-1]
+
+    if len(original_tokens) == 0 or len(translated_tokens) == 0:
+        return 0
 
     original_ngrams = get_ngrams(original_tokens, max_ngram)
     translated_ngrams = get_ngrams(translated_tokens, max_ngram)
