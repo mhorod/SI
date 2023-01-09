@@ -1,6 +1,6 @@
 from environment import *
 
-class NormalEnvironment(CarEnvironment):
+class AdvancedEnvironment(CarEnvironment):
     def __init__(self,
                     max_cars,
                     max_cars_moved,
@@ -31,8 +31,16 @@ class NormalEnvironment(CarEnvironment):
         # Valid action
         new_state = (f - action, s + action)
         new_state = (min(new_state[0], self.max_cars), min(new_state[1], self.max_cars))
+        move_cost = self.rewards.move_car * abs(action)
+        # We can move one car for free
+        if action > 0:
+            move_cost -= self.rewards.move_car
 
-        cost = self.rewards.move_car * abs(action)
+        # If we have more than 10 cars, we have to pay a storage cost
+        storage_cost = self.rewards.store_car * (max(0, new_state[0] - 10) + max(0, new_state[1] - 10))
+
+        cost = move_cost + storage_cost
+
         return {
             Outcome(outcome.new_state, cost + outcome.reward) : p
             for outcome, p in self.get_open_store_transitions(new_state).items()

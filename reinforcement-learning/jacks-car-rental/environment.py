@@ -12,6 +12,7 @@ class Location:
 class Rewards:
     move_car: int = -2
     rent_car: int = 10
+    store_car: int = -4
 
 class Poisson:
     def __init__(self):
